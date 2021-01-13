@@ -1,5 +1,9 @@
 .asd {
   padding: 50px 0;
+
+  @media (max-width: 960px) {
+    padding-bottom: 0;
+  }
 }
 
 .qwe {
@@ -16,20 +20,24 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .asdItem {
-  max-width: 500px;
-  width: 49%;
+  width: calc(50% - 10px);
   margin-bottom: 20px;
   position: relative;
   padding-top: 25%;
+  margin-right: 20px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
 
   @media (max-width: 960px) {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
+    max-width: none;
   }
 }
 
@@ -39,13 +47,14 @@
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 
 .names {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-    
+  padding-top: 10px;
 }
 
 .nameImg {
@@ -68,4 +77,28 @@
     text-align: center;
     width: 100%;
   }
+}
+
+.asdItemTitle {
+  font-size: 31px;
+  line-height: 60px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-weight: bold;
+  
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+
+}
+
+.asdHeader {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
