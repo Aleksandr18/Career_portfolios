@@ -50,6 +50,10 @@
   z-index: 5;
 }
 
+.vtk {
+  height: 90%;
+}
+
 .names {
   display: flex;
   align-items: center;
@@ -101,4 +105,23 @@
   margin-bottom: 30px;
   align-items: center;
   justify-content: space-between;
+}
+
+.list {
+  position: absolute;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.linkP {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.linkV {
+  text-decoration: none;
+  font-size: 24px;
 }
